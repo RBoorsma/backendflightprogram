@@ -14,6 +14,6 @@ public class PasswordHasher {
     }
     public boolean Authenticate(String Email, String Password)
     {
-        return _encoder.matches(Password, "put method here"); //TODO Fill Method
+        return _encoder.matches(Password, "put method here"); //TODO Fill Metho
     }
 }
