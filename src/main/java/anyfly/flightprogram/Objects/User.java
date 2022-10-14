@@ -7,5 +7,5 @@ import lombok.Setter;
 @Setter
 public class User {
     public String Email;
-    public String Password;
+    public String Password; //yes
 }
