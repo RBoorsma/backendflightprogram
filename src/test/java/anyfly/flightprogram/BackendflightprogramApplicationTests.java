@@ -1,0 +1,13 @@
+package anyfly.flightprogram;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class BackendflightprogramApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
