@@ -1,4 +1,4 @@
-package anyfly.flightprogram.Objects;
+package anyfly.flightprogram.objects;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
