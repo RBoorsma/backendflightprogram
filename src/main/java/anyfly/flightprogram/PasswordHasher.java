@@ -1,6 +1,5 @@
 package anyfly.flightprogram;
 
-import anyfly.flightprogram.Objects.*;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 public class PasswordHasher {
     private Argon2PasswordEncoder _encoder;
