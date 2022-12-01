@@ -1,6 +1,5 @@
 package anyfly.flightprogram.services;
 
-import anyfly.flightprogram.Exceptions.UnexpectedException;
 import anyfly.flightprogram.objects.DTO.Login.RegisterDTO;
 import anyfly.flightprogram.objects.DTO.Login.UserDTO;
 import anyfly.flightprogram.objects.User;
@@ -15,7 +14,14 @@ import java.util.Objects;
 public class AuthService implements IAuthService {
     @Autowired
     private IUserRepo repo;
+    /**
+     * Mapper is responsible for mapping between {@code DTOs} and {@code Entities}
+     * @see ModelMapper
+     */
     private final ModelMapper mapper = new ModelMapper();
+
+    @Autowired
+    private IJWTService service;
 
     public String hash(String password) {
         return encoder.encode(password);
