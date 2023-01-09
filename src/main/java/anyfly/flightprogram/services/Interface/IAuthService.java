@@ -1,4 +1,4 @@
-package anyfly.flightprogram.services;
+package anyfly.flightprogram.services.Interface;
 
 import anyfly.flightprogram.objects.DTO.Login.RegisterDTO;
 import anyfly.flightprogram.objects.DTO.Login.UserDTO;

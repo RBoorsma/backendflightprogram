@@ -1,23 +1,26 @@
-package anyfly.flightprogram.objects;
+package anyfly.flightprogram.objects.Main;
 
+import anyfly.flightprogram.objects.Main.Packages;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-public  class User {
+public class User {
     private String firstName;
     private String lastName;
     private String email;
     private String password;
+    @ManyToMany
+    private List<Packages> packages;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id; }
+    private int id;
+}
 
