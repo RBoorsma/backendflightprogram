@@ -9,6 +9,8 @@ jobs:
     name: Build container
     runs-on: ubuntu-latest
     steps:
+    - name: test
+      run: echo "user ${{secrets.DOCKER_USER}} and password ${{secrets.DOCKER_PASSWORD}"
     - name: Checkout code
       uses: actions/checkout@v3
     - name: docker login
@@ -18,6 +20,7 @@ jobs:
        password: ${{secrets.DOCKER_PASSWORD}}
     - name: Build and push to docker 
       run: docker build. -- file Dockerfil e-- tag FlightProgram/backend:$(date + %s)
+      
       
     - name: Docker Push
       run: docker push ${{secrets.DOCKER_USER}}/flightprogrambackend
