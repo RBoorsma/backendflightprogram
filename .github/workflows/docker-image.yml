@@ -9,8 +9,6 @@ jobs:
     name: Build container
     runs-on: ubuntu-latest
     steps:
-    - name: test
-      run: echo "user ${{secrets.DOCKER_USER}} and password ${{secrets.DOCKER_PASSWORD}}"
     - name: Checkout code
       uses: actions/checkout@v3
     - name: docker login
