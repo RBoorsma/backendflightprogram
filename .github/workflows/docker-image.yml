@@ -14,7 +14,7 @@ jobs:
     - name: docker login
       uses: docker/login-action@v2
       with:
-       username: ${{secretes.DOCKER_USER}}
+       username: ${{secrets.DOCKER_USER}}
        password: ${{secrets.DOCKER_PASSWORD}}
     - name: Build and push to docker 
       run: docker build. -- file Dockerfil e-- tag FlightProgram/backend:$(date + %s)
