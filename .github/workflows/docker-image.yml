@@ -12,11 +12,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
     - name: docker login
-      env:
-       DOCKER_USER: ${{ secrets.DOCKER_USER }}
-       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      run: |
-        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      uses: docker/login-action@v2
+      with:
+       username: ${{secretes.DOCKER_USER}}
+       password: ${{secrets.DOCKER_PASSWORD}}
     - name: Build and push to docker 
       run: docker build. -- file Dockerfil e-- tag FlightProgram/backend:$(date + %s)
       
