@@ -16,9 +16,11 @@ jobs:
       with:
        username: ${{secrets.DOCKER_USER}}
        password: ${{secrets.DOCKER_PASSWORD}}
+    - name: Maven build project
+      run: mvn clean package
     - name: Build and push to docker 
-      run: docker build . --file Dockerfile --tag flightprogram/backend:latest
+      run: docker build -t rboorsma/flightprogrambackend:latest .
       
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/flightprogrambackend
+      run: docker push rboorsma/flightprogrambackend:latest
